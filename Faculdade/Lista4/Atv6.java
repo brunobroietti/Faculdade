@@ -15,7 +15,7 @@ public class Atv6 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String sexo = "", sexoMenorSal = "";
-        int idade, salario, mediaSalario, somaSalario = 0, cont = 0;
+        int idade = 0, salario, mediaSalario, somaSalario = 0, cont = 0;
         int menorSalario = 0;
         int m = 0, f = 0;
         int mIdade = 0;
@@ -23,12 +23,12 @@ public class Atv6 {
         int idadeMenorSal = 0;
 
 
-        do {
+        while(idade >= 0) {
             System.out.print("Digite sua idade: ");
             idade = in.nextInt();
             if(idade < mIdade) {
                 mIdade = idade;
-            } else if (idade > menorIdade) {
+            } else if ((idade > menorIdade) && (idade >= 0)) {
                 menorIdade = idade;
             }
 
@@ -51,7 +51,7 @@ public class Atv6 {
             }
 
             cont++;
-        } while(idade < 0);
+        }
 
         // a)
         mediaSalario = somaSalario/cont;
