@@ -1,3 +1,6 @@
+/*
+ Leia uma matriz 4 x 4, conte e escreva quantos valores maiores que 10 ela possui.
+*/
 package Lista8;
 
 import java.util.Scanner;
