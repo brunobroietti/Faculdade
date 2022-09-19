@@ -14,40 +14,41 @@ public class Ex5 {
         int matrizValores[] = new int[25];
         int i, j, x;
         int coluna = 0, linha = 0;
-        int maiorValor = 0;
 
         for(i = 0; i < 5; i++) {
             for(j = 0; j < 5; j++) {
-                System.out.println("Coluna = "+(i + 1)+" Linha = "+(j + 1));
+                System.out.println("Insira o valor da Coluna = "+(i + 1)+" e da Linha = "+(j + 1));
                 matriz[i][j] = in.nextInt();
 
                 matrizValores[i] = matriz[i][j];
-
-                if(matriz[i][j] > maiorValor) {
-                    maiorValor = matriz[i][j];
-                }
             }
         }
+
         for(i = 0; i < 5; i++) {
             for(j = 0; j < 5; j++) {
                 System.out.print("["+matriz[i][j]+"]");
             }
             System.out.println();
         }
-        System.out.println("Digite um número existente na matriz: ");
+
+        System.out.println("Digite um número para buscar na matriz: ");
         x = in.nextInt();
+
+        int ok = 0;
 
         for(i = 0; i < 5; i++) {
             for(j = 0; j < 5; j++) {
                 if(x == matriz[i][j]) {
                     linha = i + 1;
                     coluna = j + 1;
+                    ok = 1;
                 }
             }
         }
-        if(x != matrizValores[i]) {
+        if(ok == 1) {
+            System.out.println("O " +x+ " está localizado na coluna "+coluna+" e na linha "+linha);
+        }else if (ok == 0){
             System.out.println("Valor não encontrado!");
         }
-        System.out.println("X está localizado na coluna "+coluna+" e na linha "+linha);
     }
 }
