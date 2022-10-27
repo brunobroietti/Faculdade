@@ -17,7 +17,13 @@ public class ListaLigada<T> {
 
     public void adicionaInicio(T conteudo) {
         NoPetri<T> novoNo = new NoPetri<T>(conteudo, null);
-        primeiro = novoNo;
+        if(tamanho == 0) {
+            primeiro = novoNo;
+        }else {
+            primeiro.setAntes(novoNo);
+            novoNo.setProximo(primeiro);
+            primeiro = novoNo;
+        }
         tamanho++;
     }
 
@@ -43,7 +49,7 @@ public class ListaLigada<T> {
             NoPetri<T> atual = primeiro;
             int cont = 0;
             while (atual.getProximo() != null) {
-                System.out.println("O dado do Nó na posição " + cont + " é : " + atual.getConteudo());
+                System.out.println("O dado do Nó na posição " + cont + " é: " + atual.getConteudo());
                 atual = atual.getProximo();
                 cont++;
             }
