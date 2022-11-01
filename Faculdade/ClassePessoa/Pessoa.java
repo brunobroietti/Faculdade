@@ -15,8 +15,6 @@ public class Pessoa {
         return nomeTitular;
     }
 
-
-
     public void setNomeTitular(String nomeTitular) {
         this.nomeTitular = nomeTitular;
     }
