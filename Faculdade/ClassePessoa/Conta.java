@@ -25,7 +25,7 @@ public class Conta extends Pessoa{
 
     public void setNumeroConta(int numeroConta) {
         this.numeroConta = numeroConta;
-    }
+        }
 
     public double getSaldo() {
         return saldo;
@@ -45,12 +45,12 @@ public class Conta extends Pessoa{
         } else {
             System.out.println("Impossível sacar um valor negativo.");
         }
-
     }
 
     public void deposito(double valor, Conta conta) {
         if(valor > 0) {
             conta.saldo = conta.saldo + valor;
+            System.out.println();
             System.out.println("Depósito concluído com sucesso.");
         } else {
             System.out.println("Não é possível depositar valores negativos ou iguais a 0.");
@@ -69,6 +69,7 @@ public class Conta extends Pessoa{
         if(valor > 0  && valor <= this.saldo) {
             contaDestino.saldo += valor;
             this.saldo -= valor;
+            System.out.println();
             System.out.println("Transferência realizada com sucesso!");
         } else {
             System.out.println("Não é possível transferir valores negativos ou iguais a 0.");
