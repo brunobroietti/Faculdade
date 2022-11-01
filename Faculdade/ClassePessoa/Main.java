@@ -19,5 +19,8 @@ public class Main {
         System.out.println("Número da conta: "+c2.getNumeroConta());
         System.out.println("Saldo da conta: "+c2.getSaldo());
         System.out.println("Tipo da conta: "+c2.getTipoConta());
+
+        c2.transfere(c1, 50000);
+        c1.informaSaldo();
     }
 }
