@@ -3,7 +3,6 @@ package TrabPetri;
 public class Conta extends Pessoa{
     private double saldo;
     private int numeroDaConta;
-    private String tipoConta;
 
     public Conta(String nomeTitular, int cpf, int numeroDaConta, double saldo) {
         super(nomeTitular, cpf);
