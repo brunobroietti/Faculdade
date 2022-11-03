@@ -1,13 +1,14 @@
 package ClassePessoa;
 
-public class Conta extends Pessoa{
+public class Conta extends Pessoa {
     private int numeroConta;
     private double saldo;
     private String tipoConta;
 
-    public Conta(String nomeTitular, int idade, int cpf, int numeroConta, double saldo, String tipoConta) {
-        super(nomeTitular, cpf, idade);
+    public Conta(String nomeTitular, String dataDeNascimento, int idade, int cpf, int numeroConta, double saldo, String tipoConta) {
+        super(nomeTitular, dataDeNascimento, cpf, idade);
         this.nomeTitular = nomeTitular;
+        this.dataDeNascimento = dataDeNascimento;
         this.idade = idade;
         this.cpf = cpf;
         this.numeroConta = numeroConta;
