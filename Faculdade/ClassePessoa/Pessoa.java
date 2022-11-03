@@ -2,11 +2,13 @@ package ClassePessoa;
 
 public class Pessoa {
     String nomeTitular;
+    String dataDeNascimento;
     int cpf;
     int idade;
 
-    public Pessoa(String nome, int cpf, int idade) {
+    public Pessoa(String nome, String dataDeNascimento, int cpf, int idade) {
         this.nomeTitular = nome;
+        this.dataDeNascimento = dataDeNascimento;
         this.cpf = cpf;
         this.idade = idade;
     }
@@ -15,8 +17,8 @@ public class Pessoa {
         return nomeTitular;
     }
 
-    public void setNomeTitular(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
+    public String getDataDeNascimento() {
+        return dataDeNascimento;
     }
 
     public int getIdade() {
@@ -25,9 +27,5 @@ public class Pessoa {
 
     public int getCpf() {
         return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
     }
 }
